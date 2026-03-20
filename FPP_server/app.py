@@ -16,7 +16,7 @@ CORS(
     app,
     resources={
         r"/*": {
-            "origins": "https://sturdy-spoon-qgpxggv47rv24pvp-5173.app.github.dev"
+            "origins": "https://improved-memory-jqw44vg66gvfp97v-5173.app.github.dev"
         }
     },
     supports_credentials=True,
