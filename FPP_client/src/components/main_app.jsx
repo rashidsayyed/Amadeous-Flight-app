@@ -164,7 +164,7 @@ const MainApp = ({ handleLogout }) => {
 
   const predictPrice = async (priceData) => {
     try {
-      const response = await axios.post("https://kdrn74-5000.csb.app/predict", {
+      const response = await axios.post("https://improved-memory-jqw44vg66gvfp97v-5000.app.github.dev/predict", {
         body: JSON.stringify(priceData),
       })
       const data = await response.data;

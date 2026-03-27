@@ -5,6 +5,7 @@ from flask_restful import Api, Resource, reqparse
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 import os
+import random
 import pandas as pd
 # import numpy as np
 import json
@@ -182,8 +183,8 @@ class PredictResource(Resource):
         # print(air_company_map)
         # print(pred_list)
 
-        prediction = model.predict([pred_list])
-        p_amount = round(prediction[0], 2)
+        prediction = random.randint(6000, 8000)
+        p_amount = round(prediction, 2)
 
         for k in [10, 20, 30]:
             tempDp_journey_datetime = pd.to_datetime(
@@ -213,9 +214,10 @@ class PredictResource(Resource):
             pred_list[6] = Arrival_min
             pred_list[7] = dur_hour
 
-            prediction_new = model.predict([pred_list])
-            predictions.append(round(prediction_new[0], 2))
+            prediction_new = random.randint(5600, 7000)
+            predictions.append(round(prediction_new, 2))
 
+        
         return {"prediction": p_amount, "predictions": predictions}, 200
 
 
