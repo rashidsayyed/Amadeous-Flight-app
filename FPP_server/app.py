@@ -17,7 +17,7 @@ CORS(
     app,
     resources={
         r"/*": {
-            "origins": "https://improved-memory-jqw44vg66gvfp97v-5173.app.github.dev"
+            "origins": "https://improved-memory-jqw44vg66gvfp97v-5174.app.github.dev"
         }
     },
     supports_credentials=True,
